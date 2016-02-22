@@ -47,4 +47,8 @@ npm install --save-dev grunt-inline-angular-templates
 * Add a task to your Gruntfile.js to generate the templates inside index.html
 * Run the task and the templates should be cached inside index.html (e.g. in build/index.html)
 
+##Notes
+* The class works with angular2.0.0-beta.7
+* Optionally TemplateCacheResolver can be replaced with anything else as long as it implements the CacheResolver interface.
+
 The webpack task won't be necessary if system.js is used (index.html has to be modified to work with system.js).
