@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "outDir": "built",
+        "rootDir": ".",
+        "sourceMap": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "typings/browser/ambient/es6-promise/es6-promise.d.ts",
+        "typings/browser/ambient/es6-collections/es6-collections.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "test"
+    ]
+}

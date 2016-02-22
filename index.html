@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Angular 2 Template Cache Example</title>
+    <!--TODO css needs to be sorted out via npm-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<!-- Begin Templates -->
+<script type="text/ng-template" id="src/home/home-page.html">
+<h4>Colorsss</h4>
+<ul>
+    <li *ngFor="#color of colors" [ngStyle]="{'color': color.color}">
+        <span style="color: darkslategrey">{{color.color | upperCase}}</span>
+    </li>
+</ul>
+</script>
+
+<script type="text/ng-template" id="src/router/navigation.html">
+<ul class="nav nav-pills">
+    <li role="presentation"><a [routerLink]="['/Home']">Hsome</a></li>
+</ul>
+
+<div class="page-header"><h4>{{header}}</h4></div>
+
+<router-outlet></router-outlet>
+</script>
+<!-- End Templates -->
+
+
+
+
+<div class="container">
+    <mainroot></mainroot>
+</div>
+<script src="build/vendors.js"></script>
+<script src="build/bundle.js"></script>
+</body>
+
+</html>
