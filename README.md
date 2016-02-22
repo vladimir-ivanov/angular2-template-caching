@@ -4,7 +4,7 @@
 
 
 
-##Getting started
+##Getting started with the example
 
 * Install dependencies and start compiling:
 `
@@ -22,6 +22,8 @@ or use a server of your choice and open index.html in any browser
 
 `grunt build`
 
+
+##How to use
 * Copy RuntimeMetadataResolverWrapper and TemplateCacheResolver classes within your project
 * Add the code to the app bootstrapper:
 
@@ -36,5 +38,13 @@ bootstrap(<any>RouterComponent, [
     FORM_DIRECTIVES
 ]);
 `
+* install grunt-inline-angular-templates 
+
+`
+npm install --save-dev grunt-inline-angular-templates
+`
+
+* Add a task to your Gruntfile.js to generate the templates inside index.html
+* Run the task and the templates should be cached inside index.html (e.g. in build/index.html)
 
 The webpack task won't be necessary if system.js is used (index.html has to be modified to work with system.js).
